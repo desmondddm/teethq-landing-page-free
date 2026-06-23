@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teeth Q Dental Surgeons — 22 Dentists &amp; Specialists · 6 Locations · MOH-Licensed</title>
+  <meta name="description" content="Teeth Q Dental Group: general dentistry, oral surgery, braces and implants under one roof. 22+ dentists and specialists across 6 Singapore locations. MOH-licensed, CHAS &amp; MediSave accepted.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brown: #5a4d3e;
+      --brown-light: #7a6d5e;
+      --teal: #005060;
+      --teal-light: #e8f4f6;
+      --teal-bright: #008090;
+      --cream: #faf8f5;
+      --cream-dark: #f0ece6;
+      --white: #ffffff;
+      --text-primary: #2d2820;
+      --text-secondary: #6b6259;
+      --text-light: #9a918a;
+      --gold: #e8b84b;
+      --border: #e8e2da;
+      --serif: 'Source Serif 4', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text-primary);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo img { height: 36px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--text-secondary);
+      font-size: 14px; font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta {
+      background: var(--teal) !important; color: var(--white) !important;
+      padding: 10px 20px !important; border-radius: 8px; font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--teal-bright) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 112px 24px 72px;
+      background: var(--cream);
+    }
+    .hero-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+    }
+    .hero-eyebrow {
+      font-family: var(--sans); font-size: 13px; font-weight: 600;
+      color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-size: 42px; line-height: 1.15;
+      font-weight: 700; color: var(--text-primary); margin-bottom: 20px;
+    }
+    .hero h1 em {
+      color: var(--teal); font-style: normal;
+    }
+    .hero-sub {
+      font-size: 17px; color: var(--text-secondary); margin-bottom: 28px;
+      max-width: 460px; line-height: 1.65;
+    }
+    .hero-review-bar {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 28px;
+    }
+    .review-text { font-size: 15px; color: var(--text-secondary); }
+    .review-text strong { color: var(--text-primary); font-weight: 700; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;
+      text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-teal { background: var(--teal); color: var(--white); }
+    .btn-teal:hover { background: var(--teal-bright); transform: translateY(-1px); }
+    .btn-wa { background: #25d366; color: var(--white); }
+    .btn-wa:hover { background: #1fb855; transform: translateY(-1px); }
+
+    .hero-image { position: relative; border-radius: 14px; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; display: block; }
+    .hero-float {
+      position: absolute; bottom: 16px; left: 16px;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      padding: 10px 16px; border-radius: 8px;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--text-primary);
+    }
+    .hero-float .pulse { width: 8px; height: 8px; background: #25d366; border-radius: 50%; }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar { background: var(--brown); padding: 18px 24px; }
+    .trust-bar-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.85); font-size: 13px; font-weight: 500; white-space: nowrap;
+    }
+    .trust-item strong { color: var(--white); }
+    .trust-item svg { opacity: 0.7; flex-shrink: 0; }
+
+    /* ─── AWARDS ─── */
+    .awards { padding: 40px 24px; background: var(--cream-dark); border-bottom: 1px solid var(--border); }
+    .awards-inner { max-width: 1140px; margin: 0 auto; text-align: center; }
+    .awards-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--text-light); margin-bottom: 16px; font-weight: 600;
+    }
+    .awards-row { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; }
+    .award {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 160px;
+    }
+    .award-badge {
+      width: 40px; height: 40px; background: var(--teal); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; color: var(--white);
+    }
+    .award-name { font-size: 12px; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+    .award-year { font-size: 11px; color: var(--text-light); }
+
+    /* ─── SECTION COMMON ─── */
+    .section { padding: 72px 24px; }
+    .section-inner { max-width: 1140px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 44px; }
+    .section-header h2 {
+      font-family: var(--serif); font-size: 30px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 10px;
+    }
+    .section-header p { font-size: 16px; color: var(--text-secondary); max-width: 520px; margin: 0 auto; }
+
+    /* ─── SERVICES ─── */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .svc-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+      padding: 24px 20px; transition: all 0.2s;
+    }
+    .svc-card:hover { border-color: var(--teal); box-shadow: 0 4px 14px rgba(0,80,96,0.06); }
+    .svc-icon {
+      width: 36px; height: 36px; background: var(--teal-light); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; color: var(--teal); margin-bottom: 14px;
+    }
+    .svc-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--text-primary); }
+    .svc-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+    .svc-tag {
+      display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 600;
+      color: var(--teal); background: var(--teal-light); padding: 3px 10px; border-radius: 4px;
+    }
+
+    /* ─── WHY SECTION ─── */
+    .why { padding: 72px 24px; background: var(--cream); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .why-image { border-radius: 14px; overflow: hidden; }
+    .why-image img { width: 100%; display: block; }
+    .why-content h2 {
+      font-family: var(--serif); font-size: 30px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 20px;
+    }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .why-list li {
+      display: flex; gap: 10px; font-size: 15px; color: var(--text-secondary); line-height: 1.5;
+    }
+    .why-list li svg { flex-shrink: 0; margin-top: 3px; color: var(--teal); }
+    .why-list li strong { color: var(--text-primary); }
+
+    /* ─── TEAM ─── */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .team-card {
+      text-align: center; padding: 28px 16px;
+      border: 1px solid var(--border); border-radius: 10px; transition: all 0.2s;
+    }
+    .team-card:hover { border-color: var(--teal); }
+    .team-avatar {
+      width: 64px; height: 64px; background: var(--brown); border-radius: 50%;
+      margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 20px; font-weight: 700; font-family: var(--serif);
+    }
+    .team-card h3 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+    .team-card .role { font-size: 12px; color: var(--teal); font-weight: 600; margin-bottom: 6px; }
+    .team-card .creds { font-size: 12px; color: var(--text-light); line-height: 1.4; }
+
+    /* ─── LOCATIONS ─── */
+    .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .loc-card { border: 1px solid var(--border); border-radius: 10px; padding: 24px 20px; }
+    .loc-card h3 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+    .loc-card .area { font-size: 12px; color: var(--teal); font-weight: 600; margin-bottom: 10px; }
+    .loc-card .addr { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.4; }
+    .loc-actions { display: flex; gap: 8px; }
+    .btn-sm {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-sm-teal { background: var(--teal-light); color: var(--teal); }
+    .btn-sm-teal:hover { background: #d0edef; }
+    .btn-sm-outline { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+    .btn-sm-outline:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ─── SUBSIDY ─── */
+    .subsidy { padding: 56px 24px; background: var(--brown); color: var(--white); }
+    .subsidy-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+    }
+    .subsidy h2 { font-family: var(--serif); font-size: 26px; font-weight: 700; margin-bottom: 12px; }
+    .subsidy p { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 20px; line-height: 1.6; }
+    .subsidy-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .subsidy-tag {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 500;
+    }
+    .subsidy-hours { text-align: right; }
+    .subsidy-hours .big { font-size: 42px; font-weight: 700; font-family: var(--serif); line-height: 1; }
+    .subsidy-hours .label { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+    /* ─── SOCIAL PROOF ─── */
+    .proof { padding: 56px 24px; background: var(--cream); }
+    .proof-card { max-width: 620px; margin: 0 auto; text-align: center; }
+    .proof-stat {
+      font-family: var(--serif); font-size: 28px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 8px;
+    }
+    .proof-sub { font-size: 15px; color: var(--text-secondary); }
+
+    /* ─── FOOTER ─── */
+    .footer { padding: 40px 24px 20px; border-top: 1px solid var(--border); }
+    .footer-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-logo img { height: 28px; }
+    .footer-text { font-size: 12px; color: var(--text-light); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero h1 { font-size: 30px; }
+      .hero-image { order: -1; }
+      .nav-links { display: none; }
+      .services-grid, .team-grid, .locations-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .subsidy-inner { grid-template-columns: 1fr; }
+      .trust-bar-inner { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><img src="assets/logo.png" alt="Teeth Q Dental Surgeons"></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Our Dentists</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#" class="nav-cta">Book Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">22+ Dentists &amp; Specialists · 6 Locations</div>
+        <h1>General, Surgical &amp; Specialist Dentistry — All Under One Roof at <em>Teeth Q</em></h1>
+        <p class="hero-sub">General dentistry, oral surgery, braces and implants — all under one roof. Specialists on-site so you never need a referral elsewhere.</p>
+        <div class="hero-review-bar">
+          <span class="review-text"><strong>Specialists on-site</strong> · No external referral needed · Open 7 days</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#" class="btn btn-teal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Appointment
+          </a>
+          <a href="https://wa.me/6585225374" class="btn btn-wa">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-dental.jpg" alt="Modern dental care">
+        <div class="hero-float">
+          <span class="pulse"></span>
+          Open 7 days · Mon/Tue/Thu/Fri till 9 PM
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><strong>MOH-Licensed</strong> Dental Group</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><strong>Specialists</strong> in 4 disciplines on-site</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><strong>22+</strong> Dentists &amp; Specialists</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><strong>6</strong> Locations Across NE Singapore</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>CHAS &amp; MediSave</div>
+    </div>
+  </div>
+
+  <!-- AWARDS -->
+  <section class="awards">
+    <div class="awards-inner">
+      <div class="awards-label">Licensing &amp; Accreditation</div>
+      <div class="awards-row">
+        <div class="award">
+          <div class="award-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="award-name">MOH Licensed</div>
+          <div class="award-year">MediSave Accredited</div>
+        </div>
+        <div class="award">
+          <div class="award-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/></svg></div>
+          <div class="award-name">CHAS Accredited</div>
+          <div class="award-year">Community Health Assist Scheme</div>
+        </div>
+        <div class="award">
+          <div class="award-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+          <div class="award-name">Osstem Implant System</div>
+          <div class="award-year">Implant equipment in use</div>
+        </div>
+        <div class="award">
+          <div class="award-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+          <div class="award-name">SDC-Registered Dentists</div>
+          <div class="award-year">Singapore Dental Council</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Complete Dental Care — Specialists On-Site</h2>
+        <p>General dentistry to oral surgery, all under one roof. No referrals needed.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+          <h3>Dental Implants</h3>
+          <p>Osstem implant system. Permanent tooth replacement with MediSave-claimable procedures.</p>
+          <span class="svc-tag">MediSave claimable</span>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Wisdom Tooth Surgery</h3>
+          <p>Performed by our in-house oral and maxillofacial surgeons. No external referral needed.</p>
+          <span class="svc-tag">MediSave claimable</span>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l3 3 5-5"/></svg></div>
+          <h3>Invisalign</h3>
+          <p>Clear aligner treatment with in-house orthodontist specialists.</p>
+          <span class="svc-tag">In-house orthodontist</span>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Braces &amp; Orthodontics</h3>
+          <p>Metal and ceramic braces with dedicated orthodontist supervision. CHAS subsidy and MediSave applicable where eligible.</p>
+          <span class="svc-tag">Orthodontist-supervised</span>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5.5 7l13 10M5.5 17l13-10"/></svg></div>
+          <h3>Teeth Whitening</h3>
+          <p>Q White Express LED whitening, performed at any of our 6 clinics.</p>
+          <span class="svc-tag">Available at all 6 clinics</span>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+          <h3>Scaling &amp; Polishing</h3>
+          <p>Routine preventive care for healthy gums. CHAS subsidised for eligible patients.</p>
+          <span class="svc-tag">CHAS subsidised</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TEETH Q -->
+  <section class="why">
+    <div class="section-inner">
+      <div class="why-grid">
+        <div class="why-image">
+          <img src="assets/clinic-interior.jpg" alt="Teeth Q clinic interior">
+        </div>
+        <div class="why-content">
+          <h2>Why Families Choose Teeth Q</h2>
+          <ul class="why-list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span><strong>Specialists under one roof</strong> — 3 oral &amp; maxillofacial surgeons, 2 orthodontists, and 1 endodontist on the team. No referrals to outside clinics.</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span><strong>Hospital-trained founder</strong> — Dr Desmond Goh trained at National Dental Centre Singapore and Changi General Hospital before founding Teeth Q.</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span><strong>Open 7 days, till 9 PM most weekdays</strong> — evening and weekend appointments so you never need to take time off work. (Wed/Sat/Sun till 6 PM.)</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span><strong>Subsidy support</strong> — CHAS, MediSave, and 6 insurance panels including AIA, Alliance Medinet, and IHP. Clear fees provided at consultation.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Led By On-Site Specialists</h2>
+        <p>22+ dental professionals including oral surgeons, orthodontists, and an endodontist.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">DG</div>
+          <h3>Dr Desmond Goh</h3>
+          <div class="role">Founder &amp; Managing Director</div>
+          <div class="creds">B.D.S. (NUS) · Former NDCS &amp; Changi General · SDA Ethics Committee 2014–2016</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AC</div>
+          <h3>Dr Audrey Chua</h3>
+          <div class="role">Clinical Director</div>
+          <div class="creds">Special interest in wisdom tooth &amp; implant surgeries</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">SM</div>
+          <h3>Dr Soh May Leng</h3>
+          <div class="role">Dental Surgeon</div>
+          <div class="creds">B.D.S. (University of Otago, NZ)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSIDY + HOURS -->
+  <section class="subsidy">
+    <div class="subsidy-inner">
+      <div>
+        <h2>Affordable Care, Flexible Payment</h2>
+        <p>We accept all major government subsidies and offer flexible payment options so cost is never a barrier to your dental health.</p>
+        <div class="subsidy-tags">
+          <span class="subsidy-tag">CHAS</span>
+          <span class="subsidy-tag">MediSave</span>
+          <span class="subsidy-tag">AIA</span>
+          <span class="subsidy-tag">Alliance Medinet</span>
+          <span class="subsidy-tag">IHP</span>
+          <span class="subsidy-tag">Inova Care</span>
+        </div>
+      </div>
+      <div class="subsidy-hours">
+        <div class="big">9 PM</div>
+        <div class="label">Open till 9 PM (Mon/Tue/Thu/Fri)<br>7 days a week</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof">
+    <div class="section-inner">
+      <div class="proof-card">
+        <div class="proof-stat">Care Backed by Specialists</div>
+        <p class="proof-sub">22+ dentists and specialists, including 3 oral &amp; maxillofacial surgeons, 2 orthodontists and 1 endodontist — across 6 neighbourhood locations, with specialists in oral surgery, orthodontics and endodontics on-site. Open 7 days a week.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="section" id="locations">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>6 Locations Across Singapore</h2>
+        <p>All clinics are in heartland residential estates, close to where you live.</p>
+      </div>
+      <div class="locations-grid">
+        <div class="loc-card">
+          <h3>Punggol</h3>
+          <div class="area">Matilda Portico</div>
+          <div class="addr">218 Sumang Walk #01-02<br>S(820218)</div>
+          <div class="loc-actions">
+            <a href="https://wa.me/6585225374" class="btn-sm btn-sm-teal">WhatsApp</a>
+            <a href="tel:+6565382260" class="btn-sm btn-sm-outline">Call</a>
+          </div>
+        </div>
+        <div class="loc-card">
+          <h3>Hougang</h3>
+          <div class="area">Hougang Green</div>
+          <div class="addr">21 Hougang St 51 #01-21<br>S(538719)</div>
+          <div class="loc-actions">
+            <a href="https://wa.me/6585225374" class="btn-sm btn-sm-teal">WhatsApp</a>
+            <a href="#" class="btn-sm btn-sm-outline">Call</a>
+          </div>
+        </div>
+        <div class="loc-card">
+          <h3>Sengkang</h3>
+          <div class="area">Fernvale Woods</div>
+          <div class="addr">455 Sengkang West Ave #01-09<br>S(790455)</div>
+          <div class="loc-actions">
+            <a href="https://wa.me/6585225374" class="btn-sm btn-sm-teal">WhatsApp</a>
+            <a href="#" class="btn-sm btn-sm-outline">Call</a>
+          </div>
+        </div>
+        <div class="loc-card">
+          <h3>Kovan</h3>
+          <div class="area">Hougang Rivercourt</div>
+          <div class="addr">377 Hougang St 32 #B1-09/10<br>S(530377)</div>
+          <div class="loc-actions">
+            <a href="https://wa.me/6585225374" class="btn-sm btn-sm-teal">WhatsApp</a>
+            <a href="#" class="btn-sm btn-sm-outline">Call</a>
+          </div>
+        </div>
+        <div class="loc-card">
+          <h3>Dakota</h3>
+          <div class="area">Dakota Breeze</div>
+          <div class="addr">91 Jln Satu #01-06<br>S(390091)</div>
+          <div class="loc-actions">
+            <a href="https://wa.me/6585225374" class="btn-sm btn-sm-teal">WhatsApp</a>
+            <a href="#" class="btn-sm btn-sm-outline">Call</a>
+          </div>
+        </div>
+        <div class="loc-card">
+          <h3>Tampines</h3>
+          <div class="area">Tampines GreenGem</div>
+          <div class="addr">954C Tampines St 96 #01-07<br>S(523954)</div>
+          <div class="loc-actions">
+            <a href="https://wa.me/6585225374" class="btn-sm btn-sm-teal">WhatsApp</a>
+            <a href="#" class="btn-sm btn-sm-outline">Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo"><img src="assets/logo.png" alt="Teeth Q"></a>
+      <div class="footer-text">© 2026 Teeth Q Dental Surgeons. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

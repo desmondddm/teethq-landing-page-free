@@ -1,1 +1,8 @@
 .vercel
+.vercelignore
+.DS_Store
+**/.DS_Store
+_subsidy-demo.html
+index-v1-baseline.html
+preview-url.txt
+qa-shot-*.png
